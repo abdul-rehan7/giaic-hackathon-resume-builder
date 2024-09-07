@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --blue: #0a95c0d8;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.first {
+  padding: 20px;
+  color: white;
+  width: auto;
+  background-color: #0a95c0d8;
+}
+.second {
+  width: 100%;
+  padding: 20px;
+}
+.info {
+  padding-top: 2rem;
+}
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.bar {
+  margin: 1rem 0rem;
+  height: 0.2rem;
+  border-radius: 5rem;
+  background: var(--blue);
+
+  width: 100%;
+}
+.name {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #333;
+  font-weight: bold;
+}
+.title {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: #333;
+}
+.items {
+  font-size: 1.2rem;
+  padding: 4px 0px;
+  height: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+p {
+  padding: 0px 0px;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #333;
+}
+h2 {
+  color: var(--blue);
+  text-transform: capitalize;
+}
+h3 {
+  text-decoration: underline;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+strong {
+  color: white;
+}
+
+.profile-pic {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+.mini-heading {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+form {
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#resume-display {
+  margin-top: 30px;
+}
+
+#generated-info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/*  ============================================= Responsive design =============================================  */
+@media (max-width: 600px) {
+  .first {
+    padding: 10px;
+    color: white;
+  }
+
+  .second {
+    width: 100%;
+    padding: 10px;
+  }
+  .info {
+    padding-top: 0.6rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    width: 100%;
+
+    text-transform: capitalize;
+    color: #333;
+    font-weight: bold;
+  }
+  .title {
+    font-size: 0.6rem;
+    text-transform: capitalize;
+    color: #333;
+  }
+  details {
+    font-size: 0.5rem;
+  }
+  .items {
+    font-size: .4rem;
+    font-weight: 600;
+    padding: 4px 0px;
+    height: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bar {
+    margin: 0.5rem 0rem;
+    height: 0.07rem;
+  }
+  .mini-heading {
+    color: black;
+    font-weight: 600;
+    font-size: 0.46rem;
+  }
+  .work-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  h2 {
+    font-size: 0.7rem;
+    margin: 0rem 0rem;
+    margin-top: 0.4rem;
+  }
+  p {
+    font-size: 0.4rem;
+    margin: 0;
+    padding: 2px 0px;
+  }
+  h3 {
+    color: white;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+  }
+  .container {
+    width: 90vw;
+  }
+
+  .profile-pic {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  li {
+    font-size: 0.4rem;
+  }
+}
