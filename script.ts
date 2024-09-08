@@ -1,5 +1,4 @@
-import { jsPDF } from "jspdf";
-
+var html2pdf: any;
 function updateName(): void {
   // Get the user input values
   const userNameInput = (
@@ -84,20 +83,29 @@ function updateName(): void {
     listElement.appendChild(listItem);
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const downloadButton = document.getElementById("download-resume");
+  function downloadResume(): void {
+    const downloadBtn = document.getElementById("download-resume");
 
-    downloadButton?.addEventListener("click", () => {
-      const doc = new jsPDF();
+    downloadBtn?.addEventListener("click", function () {
+      // Get the resume element
+      const resumeElement = document.querySelector(".resume");
 
-      // Get content from your resume section
-      const resumeContent = document.querySelector(".resume")?.innerHTML || "";
+      if (resumeElement) {
+        const opt = {
+          margin: 1,
+          filename: "Resume.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        };
 
-      // Add content to the PDF
-      doc.text(resumeContent, 10, 10);
-
-      // Save the PDF
-      doc.save("resume.pdf");
+        // Use html2pdf to generate and download the PDF
+        html2pdf().from(resumeElement).set(opt).save();
+      } else {
+        alert("Resume element not found!");
+      }
     });
-  });
+    // Activates the download button
+  }
+  downloadResume();
 }

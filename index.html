@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Resume Builder</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -92,10 +91,18 @@
           </div>
         </div>
       </div>
-      <button id="download-resume">Download Resume</button>
+      <div class="download-section">
 
+        <button id="download-resume">Download Resume</button>
+      </div>
+      <script>
+        document.getElementById('download-resume').addEventListener('click', () => {
+          const content = document.getElementById('content');
+          html2pdf().from(content).save();
+        });
+      </script>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
