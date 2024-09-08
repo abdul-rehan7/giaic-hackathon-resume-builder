@@ -81,4 +81,22 @@ function updateName() {
         // Activates the download button
     }
     downloadResume();
+    function makeSectionsEditable() {
+        const editableElements = document.querySelectorAll("[contenteditable='true']");
+        // Loop through each editable element and save changes dynamically
+        editableElements.forEach((element) => {
+            element.addEventListener("input", () => {
+                // Optionally, save the modified content to local storage or a variable
+                const elementId = element.id;
+                const updatedContent = element.textContent?.trim() || "";
+                // Dynamically save or process the updated content
+                console.log(`Updated ${elementId}: ${updatedContent}`);
+                // You can add functionality here to persist the changes (e.g., in localStorage)
+            });
+        });
+    }
+    // Call the function to make the sections editable
+    document.addEventListener("DOMContentLoaded", () => {
+        makeSectionsEditable();
+    });
 }
