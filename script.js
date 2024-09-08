@@ -1,12 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function updateName() {
     // Get the user input values
-    const userNameInput = document.getElementById("user-input").value;
-    const userEmailInput = document.getElementById("user-email").value;
-    const userPhoneInput = document.getElementById("user-phone").value;
-    const userEducationInput = document.getElementById("user-Education").value;
-    const userExperienceInput = document.getElementById("user-Experience").value;
+    var userNameInput = document.getElementById("user-input").value;
+    var userEmailInput = document.getElementById("user-email").value;
+    var userPhoneInput = document.getElementById("user-phone").value;
+    var userEducationInput = document.getElementById("user-Education").value;
+    var userExperienceInput = document.getElementById("user-Experience").value;
     // Check if name is entered; if not, show an alert or return
     if (!userNameInput.trim()) {
         alert("Please enter your name");
@@ -26,35 +24,48 @@ function updateName() {
         return;
     }
     // Get the resume section and show it
-    const userResume = document.querySelector(".resume");
+    var userResume = document.querySelector(".resume");
     userResume.style.display = "block";
     // Update the name and email in the resume
-    const nameParagraph = document.getElementById("name");
+    var nameParagraph = document.getElementById("name");
     nameParagraph.textContent = userNameInput;
-    const emailParagraph = document.getElementById("email");
+    var emailParagraph = document.getElementById("email");
     emailParagraph.textContent = userEmailInput;
-    const userPhone = document.getElementById("phone");
+    var userPhone = document.getElementById("phone");
     userPhone.textContent = userPhoneInput;
-    const userEdu = document.getElementById("user-edu");
+    var userEdu = document.getElementById("user-edu");
     userEdu.textContent = userEducationInput;
-    const userExp = document.getElementById("user-exp");
+    var userExp = document.getElementById("user-exp");
     userExp.textContent = userExperienceInput;
     // Get the input element and its value
-    const inputElement = document.getElementById("skillsInput");
-    const skillsInput = inputElement.value;
+    var inputElement = document.getElementById("skillsInput");
+    var skillsInput = inputElement.value;
     // Split the input into an array of skills
-    const skillsArray = skillsInput
+    var skillsArray = skillsInput
         .split(",")
-        .map((skill) => skill.trim())
-        .filter((skill) => skill.length > 0);
+        .map(function (skill) { return skill.trim(); })
+        .filter(function (skill) { return skill.length > 0; });
     // Get the list element
-    const listElement = document.getElementById("skillsList");
+    var listElement = document.getElementById("skillsList");
     // Clear previous list items
     listElement.innerHTML = "";
     // Create and append list items for each skill
-    skillsArray.forEach((skill) => {
-        const listItem = document.createElement("li");
+    skillsArray.forEach(function (skill) {
+        var listItem = document.createElement("li");
         listItem.textContent = skill;
         listElement.appendChild(listItem);
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        var toggleButton = document.getElementById("toggle-skills");
+        toggleButton.addEventListener("click", function () {
+            if (listElement.style.display === "none") {
+                listElement.style.display = "block";
+                toggleButton.textContent = "Hide Skills";
+            }
+            else {
+                listElement.style.display = "none";
+                toggleButton.textContent = "Show Skills";
+            }
+        });
     });
 }
