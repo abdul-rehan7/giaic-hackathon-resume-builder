@@ -88,7 +88,7 @@ function updateName(): void {
 
     downloadBtn?.addEventListener("click", function () {
       // Get the resume element
-      const resumeElement = document.querySelector(".resume");
+      const resumeElement = document.querySelector(".container");
 
       if (resumeElement) {
         const opt = {

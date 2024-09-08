@@ -102,7 +102,7 @@ h1 {
   padding: 1.4rem;
   width: 40%;
   top: 0;
-  min-height: 40rem;
+  min-height: 50rem;
   height: auto;
   background-color: var(--blue);
   color: white;
@@ -116,7 +116,7 @@ h1 {
   display: flex;
   padding: 1.4rem;
   width: 100%;
-  min-height: 40rem;
+  min-height: 50rem;
   height: auto;
   flex-direction: column;
   gap: 0.7rem;
