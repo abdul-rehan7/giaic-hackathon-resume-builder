@@ -45,7 +45,7 @@ body {
 }
 .generate-btn:hover {
   scale: 110%;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   background: var(--l-blue);
 }
 #user-edu {
@@ -60,7 +60,7 @@ h1 {
 .resume {
   padding: 2rem 2rem;
   width: 70vw;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,6 @@ p {
     gap: 0.7rem;
   }
   .right-info {
-
     display: flex;
     padding: 0.5rem;
     width: 100%;
@@ -174,31 +173,28 @@ p {
   .resume {
     padding: 2rem 1rem;
     width: 90vw;
-
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* display: none; */
   }
-  .container{
+  .container {
     align-items: start;
     justify-content: start;
   }
-  .item{
+  .item {
     justify-content: start;
     align-items: start;
   }
   p {
     margin: 0;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
-  #email{
-    font-size: .4rem;
+  #email {
+    font-size: 0.4rem;
   }
-  ul{
-    font-size: .5rem;
+  ul {
+    font-size: 0.5rem;
   }
-
-
 }
