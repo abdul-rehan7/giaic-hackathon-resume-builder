@@ -219,6 +219,9 @@ p {
     justify-content: center;
     /* display: none; */
   }
+  .editable {
+font-size: .8rem;
+  }
   .container {
     align-items: start;
     justify-content: start;
