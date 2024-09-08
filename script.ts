@@ -1,3 +1,5 @@
+import { jsPDF } from "jspdf";
+
 function updateName(): void {
   // Get the user input values
   const userNameInput = (
@@ -80,5 +82,22 @@ function updateName(): void {
     const listItem = document.createElement("li");
     listItem.textContent = skill;
     listElement.appendChild(listItem);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const downloadButton = document.getElementById("download-resume");
+
+    downloadButton?.addEventListener("click", () => {
+      const doc = new jsPDF();
+
+      // Get content from your resume section
+      const resumeContent = document.querySelector(".resume")?.innerHTML || "";
+
+      // Add content to the PDF
+      doc.text(resumeContent, 10, 10);
+
+      // Save the PDF
+      doc.save("resume.pdf");
+    });
   });
 }
