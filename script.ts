@@ -131,4 +131,29 @@ function updateName(): void {
   document.addEventListener("DOMContentLoaded", () => {
     makeSectionsEditable();
   });
+
+  function generateShareableLink(): void {
+    // Get the username from the input or the resume section
+    const userName = (document.getElementById("name") as HTMLParagraphElement)
+      ?.textContent;
+  
+    // If the username exists, generate a URL with a query parameter
+    if (userName?.trim()) {
+      const encodedName = encodeURIComponent(userName.trim());
+      const currentUrl = window.location.href.split('?')[0]; // Current URL without query params
+      const shareableLink = `${currentUrl}?user=${encodedName}`;
+  
+      // Display the shareable link
+      const linkElement = document.getElementById("shareable-link");
+      if (linkElement) {
+        linkElement.innerHTML = `<a href="${shareableLink}" target="_blank">${shareableLink}</a>`;
+      }
+    } else {
+      alert("Please enter a valid username.");
+    }
+  }
+  
+  // Call the function when generating the resume or updating the username
+  document.getElementById("generate-link-btn")?.addEventListener("click", generateShareableLink);
+  
 }

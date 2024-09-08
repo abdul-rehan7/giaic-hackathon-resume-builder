@@ -53,7 +53,10 @@
     </div>
     <div class="resume">
       <h1>Your Resume</h1>
-      <p class="editable">Your Resume is Always Editable By Clicking Any Section Which you want to Edit :&#41;</p>
+      <p class="editable">
+        Your Resume is Always Editable By Clicking Any Section Which you want to
+        Edit :&#41;
+      </p>
 
       <div class="container">
         <div class="left-info">
@@ -63,20 +66,19 @@
           </div>
           <div class="item-col">
             <span class="heading">Email:</span>
-            <p id="email"  contenteditable="true"></p>
+            <p id="email" contenteditable="true"></p>
           </div>
           <div class="item">
             <span class="heading">Phone:</span>
-            <p id="phone"  contenteditable="true"></p>
+            <p id="phone" contenteditable="true"></p>
           </div>
-       
         </div>
 
         <div class="right-info">
-          <div class="item-col" >
+          <div class="item-col">
             <div class="title">Education</div>
 
-            <p id="user-edu" contenteditable="true" ></p>
+            <p id="user-edu" contenteditable="true"></p>
           </div>
           <div class="item-col">
             <div class="title">Experience</div>
@@ -92,14 +94,19 @@
         </div>
       </div>
       <div class="download-section">
-
         <button id="download-resume">Download Resume</button>
+        <div class="link">
+          <button id="generate-link-btn">Generate Shareable Link</button>
+        </div>
       </div>
+      <div id="shareable-link"></div>
       <script>
-        document.getElementById('download-resume').addEventListener('click', () => {
-          const content = document.getElementById('content');
-          html2pdf().from(content).save();
-        });
+        document
+          .getElementById("download-resume")
+          .addEventListener("click", () => {
+            const content = document.getElementById("content");
+            html2pdf().from(content).save();
+          });
       </script>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>

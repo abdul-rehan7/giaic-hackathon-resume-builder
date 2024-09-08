@@ -49,6 +49,24 @@ body {
   transition-duration: 0.2s;
   background: var(--l-blue);
 }
+#generate-link-btn{
+  width: auto;
+  border: none;
+  color: white;
+  background: var(--blue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+#generate-link-btn:active {
+  background: var(--l-blue);
+}
+#generate-link-btn:hover {
+  scale: 110%;
+  transition-duration: 0.2s;
+  background: var(--l-blue);
+}
 #download-resume {
   width: auto;
   border: none;
@@ -67,6 +85,7 @@ body {
 .download-section{
   width: 100%;
   display: flex;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   padding: 2rem 0rem;
@@ -89,6 +108,7 @@ h1 {
   justify-content: center;
   /* display: none; */
 }
+
 .container {
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.502);
   display: flex;
@@ -177,6 +197,7 @@ p {
     font-size: 0.9rem;
     padding: 0.7rem 1rem;
   }
+
   #download-resume {
     font-size: 0.9rem;
     padding: 0.7rem 1rem;
