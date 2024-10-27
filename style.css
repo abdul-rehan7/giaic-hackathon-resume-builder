@@ -1,4 +1,6 @@
 body {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +13,7 @@ body {
   --l-blue: #0bbcdf;
   --l-gray: #b9b9b9;
 }
+
 .input {
   padding: 1rem 2rem;
   border: 2px solid var(--l-gray);
@@ -49,7 +52,7 @@ body {
   transition-duration: 0.2s;
   background: var(--l-blue);
 }
-#generate-link-btn{
+#generate-link-btn {
   width: auto;
   border: none;
   color: white;
@@ -82,7 +85,7 @@ body {
   transition-duration: 0.2s;
   background: var(--l-blue);
 }
-.download-section{
+.download-section {
   width: 100%;
   display: flex;
   gap: 2rem;
@@ -241,7 +244,7 @@ p {
     /* display: none; */
   }
   .editable {
-font-size: .8rem;
+    font-size: 0.8rem;
   }
   .container {
     align-items: start;
