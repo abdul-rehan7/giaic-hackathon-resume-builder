@@ -54,11 +54,11 @@ function updateName() {
             const resumeElement = document.querySelector(".container");
             if (resumeElement) {
                 const opt = {
-                    margin: 1,
+                    margin: 0,
                     filename: "Resume.pdf",
-                    image: { type: "jpeg", quality: 0.98 },
+                    image: { type: "jpeg", quality: 10 },
                     html2canvas: { scale: 2 },
-                    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+                    jsPDF: { unit: "in", format:"letter", orientation: "portrait" },
                 };
                 html2pdf().from(resumeElement).set(opt).save();
             }

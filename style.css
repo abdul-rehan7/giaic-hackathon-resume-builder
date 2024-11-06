@@ -16,14 +16,14 @@ body {
 
 .input {
   padding: 1rem 2rem;
-  border: 2px solid var(--l-gray);
+  border: 1px solid var(--l-gray);
   border-radius: 0.2rem;
   font-size: 1rem;
   width: 95%;
 }
 .input-form {
-  background: white;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.094);
+  /* background: white; */
+  /* box-shadow: 0 7px 20px rgba(0, 0, 0, 0.094); */
   border-radius: 0.2rem;
   padding: 2rem 2rem;
   display: flex;
@@ -103,7 +103,7 @@ h1 {
   text-align: center;
 }
 .resume {
-  padding: 2rem 2rem;
+  margin: 2rem 2rem;
   width: 70vw;
   display: none;
   flex-direction: column;
@@ -116,7 +116,6 @@ h1 {
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.502);
   display: flex;
   align-items: center;
-  border-radius: 0.7rem;
   overflow: hidden;
   width: 100%;
 }
@@ -125,7 +124,7 @@ h1 {
   padding: 1.4rem;
   width: 40%;
   top: 0;
-  min-height: 50rem;
+  min-height: 63rem;
   height: auto;
   background-color: var(--blue);
   color: white;
@@ -139,7 +138,7 @@ h1 {
   display: flex;
   padding: 1.4rem;
   width: 100%;
-  min-height: 50rem;
+  min-height: 63rem;
   height: auto;
   flex-direction: column;
   gap: 0.7rem;
