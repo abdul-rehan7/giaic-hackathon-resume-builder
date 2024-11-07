@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 class="main-page-heading">Enter Your Resume </h1>
+    <h1 class="main-page-heading">Enter Your Resume</h1>
     <div class="input-form">
       <input
         class="input"
         type="text"
         id="user-input"
         placeholder="Enter your Name..."
+        required
+      />
+      <input
+        class="input"
+        type="text"
+        id="user-title"
+        placeholder="Your Title"
         required
       />
       <input
@@ -47,10 +54,19 @@
         id="user-Experience"
         placeholder="Enter your Experience..."
       />
+      <!-- File upload input -->
+      <input
+        class="input"
+        type="file"
+        id="imageUpload"
+        accept="image/*"
+        onchange="displayImage()"
+      />
       <button class="generate-btn" onclick="updateName()">
         Generate Resume
       </button>
     </div>
+
     <div class="resume">
       <h1>Your Resume</h1>
       <p class="editable">
@@ -58,13 +74,18 @@
         Edit :&#41;
       </p>
 
-    
-
       <div class="container">
         <div class="left-info">
-          <div class="item">
-            <p id="name" contenteditable="true"></p>
+          <!-- Display the image here -->
+          <div class="profile-cont">
+            <img
+              id="profile-image"
+              src=""
+              alt="Profile Image"
+              style="width: 200px; height: 200px; object-fit: cover"
+            />
           </div>
+
           <div class="item-col">
             <span class="heading">Email:</span>
             <p id="email" contenteditable="true"></p>
@@ -77,6 +98,12 @@
 
         <div class="right-info">
           <div class="item-col">
+            <div class="item">
+              <p id="name" contenteditable="true"></p>
+            </div>
+            <div class="item">
+              <p id="user-title" contenteditable="true"></p>
+            </div>
             <div class="title">Education</div>
 
             <p id="user-edu" contenteditable="true"></p>
@@ -99,6 +126,19 @@
       </div>
 
       <script>
+        // Function to handle image upload and display
+        function displayImage() {
+          const file = document.getElementById("imageUpload").files[0];
+          const reader = new FileReader();
+          reader.onloadend = function () {
+            document.getElementById("profile-image").src = reader.result;
+          };
+          if (file) {
+            reader.readAsDataURL(file);
+          }
+        }
+
+        // Download resume functionality
         document
           .getElementById("download-resume")
           .addEventListener("click", () => {
