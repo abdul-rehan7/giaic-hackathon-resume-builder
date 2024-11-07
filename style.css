@@ -253,6 +253,10 @@ p {
     justify-content: start;
     align-items: start;
   }
+  #name {
+    font-size: 3rem;
+    font-weight: bold;
+  }
   p {
     margin: 0;
     font-size: 0.5rem;
