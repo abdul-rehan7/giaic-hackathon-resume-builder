@@ -161,6 +161,10 @@ p {
   align-items: center;
   gap: 7px;
 }
+#name {
+  font-size: 2rem;
+  font-weight: bold;
+}
 .item-col {
   display: flex;
   flex-direction: column;
