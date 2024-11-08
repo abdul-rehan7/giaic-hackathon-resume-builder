@@ -17,13 +17,13 @@
         placeholder="Enter your Name..."
         required
       />
-      <input
+      <!-- <input
         class="input"
         type="text"
         id="user-input"
         placeholder="Your Title"
         required
-      />
+      /> -->
       <input
         class="input"
         type="text"
@@ -62,11 +62,15 @@
         accept="image/*"
         onchange="displayImage()"
       />
+      <div class="dialogue">
+  
+        <p >Your Resume will be Generated Below After Submission <img class="sticker" src="/img/giphy.gif" alt=""> </p>
+      </div>
       <button class="generate-btn" onclick="updateName()">
         Generate Resume
       </button>
     </div>
-
+    
     <div class="resume">
       <h1>Your Resume</h1>
       <p class="editable">

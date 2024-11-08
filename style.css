@@ -93,6 +93,14 @@ body {
   justify-content: center;
   padding: 2rem 0rem;
 }
+.dialogue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sticker {
+  width: 2rem;
+}
 #user-edu {
   padding: 1rem 0rem;
 }
