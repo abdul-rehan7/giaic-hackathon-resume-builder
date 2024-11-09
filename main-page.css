@@ -8,6 +8,7 @@
   font-style: normal;
 }
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -76,6 +77,47 @@ body {
 .hero .second img {
   width: 85%;
 }
+.heading{
+  font-size: 2rem;
+  padding: 1rem 0;
+  font-weight:700;
+  text-align: center;
+}
+.first-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.first-section img {
+  width: 30rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: #d4d4d4;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+.footer .list {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+.bar {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.4rem;
+  background-color: #3a3a3a;
+  color: white;
+}
+.footer-logo {
+  font-weight: bold;
+  font-size: 1rem;
+}
 
 /* ========================= MEDIA QUERIES ========================= */
 
@@ -123,5 +165,28 @@ body {
   }
   .hero .second img {
     width: 90%;
+  }
+  .heading{
+    font-size: .9rem;
+    padding: .5rem 0;
+
+  }
+  .first-section {
+    padding: 1rem;
+    font-size: 0.6rem;
+    flex-direction: column-reverse;
+    text-align: left;
+  }
+  .first-section img {
+    width: 15rem;
+  }
+  .footer {
+    font-size: 0.7rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 2fr 2fr;
+  }
+  .bar {
+    font-size: 0.4rem;
   }
 }
